@@ -82,7 +82,7 @@ const Home: React.FC = () => {
 
                     <Box marginTop={'20px'} width={'100%'}>
                         <MainTitle as="span">I Love</MainTitle>
-                        <Text marginTop={'8px'}>Art, Music, Drawing, Archor, Coding, Machine Learning</Text>
+                        <Text marginTop={'8px'}>Design, Music, Archery, Coding</Text>
                     </Box>
 
                     <Box marginTop={'20px'} width={'100%'}>

@@ -15,7 +15,6 @@ const Work: React.FC = () => {
     ]
 
     return (
-        <Flex flexDir={'column'} alignItems={'center'} >
             <Flex flexDir={'column'} alignItems={'center'} marginTop={'76px'}>
                 <Box width={'85%'} >
                     <MainTitle as={'span'}>Collaborations</MainTitle>
@@ -27,7 +26,6 @@ const Work: React.FC = () => {
                         }
                     </Flex>
                 </Box>
-            </Flex>
         </Flex>
     )
 }

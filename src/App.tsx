@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path='work' element={<Work />} />
-          <Route path='post' element={<Post />} />
+          {/* <Route path='post' element={<Post />} /> */}
         </Routes>
       </Flex>
       <Footer />

@@ -29,7 +29,6 @@ export default function AppBar() {
                 </Flex>
                 <Flex flexDir={'row'} gap={7} alignItems={'center'} width={'50%'}>
                     <NavLink to={`work`}><Text >Works</Text></NavLink>
-                    <NavLink to={`post`}><Text >Posts</Text></NavLink>
                     <Flex dir='row' alignItems={'center'}>
                         <BsGithub />
                         <chakra.a href='https://github.com/ryzencool/portolio'>
