@@ -7,6 +7,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { useColorMode, useColorModeValue } from '@chakra-ui/color-mode'
 import { chakra } from '@chakra-ui/system'
 import { NavigateFunction, useNavigate } from 'react-router'
+import { NavLink } from 'react-router-dom'
 
 export default function AppBar() {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -26,9 +27,9 @@ export default function AppBar() {
                         Marsh Chew
                     </Box>
                 </Flex>
-                <Flex flexDir={'row'} gap={4} alignItems={'center'} width={'50%'}>
-                    <Text onClick={() => { navigate("/work") }}>Works</Text>
-                    <Text onClick={() => { navigate("/post") }}>Posts</Text>
+                <Flex flexDir={'row'} gap={7} alignItems={'center'} width={'50%'}>
+                    <NavLink to={`work`}><Text >Works</Text></NavLink>
+                    <NavLink to={`post`}><Text >Posts</Text></NavLink>
                     <Flex dir='row' alignItems={'center'}>
                         <BsGithub />
                         <chakra.a href='https://github.com/ryzencool'>

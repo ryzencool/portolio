@@ -15,8 +15,7 @@ function App() {
   const bg = useColorModeValue('rgb(240, 231, 219)', 'dark.900');
 
   return (
-
-    <Box bgColor={bg} width={'100vw'}>
+    <Box bgColor={bg} width={'100vw'} minHeight={'100vh'}>
       <AppBar />
       <Routes>
         <Route index element={<Home />} />
