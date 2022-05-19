@@ -6,14 +6,15 @@ import { BsGithub } from 'react-icons/bs'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { useColorMode, useColorModeValue } from '@chakra-ui/color-mode'
 import { chakra } from '@chakra-ui/system'
-import { NavigateFunction, useNavigate } from 'react-router'
+import { NavigateFunction, useLocation, useNavigate } from 'react-router'
 import { NavLink } from 'react-router-dom'
 
 export default function AppBar() {
     const { colorMode, toggleColorMode } = useColorMode()
     const navigate: NavigateFunction = useNavigate();
-    const toggleColor = useColorModeValue('purple.500', 'orange.200')
+    const location = useLocation();
 
+    const toggleColor = useColorModeValue('purple.500', 'orange.200')
     return (
         <Flex justifyContent={'center'}
             position={'fixed'}
@@ -28,7 +29,22 @@ export default function AppBar() {
                     </Box>
                 </Flex>
                 <Flex flexDir={'row'} gap={7} alignItems={'center'} width={'50%'}>
-                    <NavLink to={`work`}><Text >Works</Text></NavLink>
+                    <NavLink to={`/work`}>
+                        {
+                            location.pathname === '/work' ?
+                                <Text
+                                    borderWidth={'3px'}
+                                    borderColor={'blue.300'}
+                                    borderStyle={'solid'}
+                                    padding={'5px'}
+                                    textDecoration={'underline'}
+                                    bgColor={'green.50'}
+                                >Work</Text>
+                                : <Text
+                                    padding={'5px'}
+                                >Work</Text>
+                        }
+                    </NavLink>
                     <Flex dir='row' alignItems={'center'}>
                         <BsGithub />
                         <chakra.a href='https://github.com/ryzencool/portolio'>

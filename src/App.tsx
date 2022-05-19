@@ -15,13 +15,14 @@ function App() {
 
   const bg = useColorModeValue('rgb(240, 231, 219)', 'dark.900');
 
+
   return (
     <Flex bgColor={bg} minWidth={'100vw'} minHeight={'100vh'} flexDir={'column'} alignItems={'center'}>
       <AppBar />
       <Flex flex={1}>
         <Routes>
           <Route index element={<Home />} />
-          <Route path='work' element={<Work />} />
+          <Route path='/work' element={<Work />} />
           {/* <Route path='post' element={<Post />} /> */}
         </Routes>
       </Flex>
