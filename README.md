@@ -1,2 +1,8 @@
-### Marsh Chew's Portolio
+### Marsh Chew's HomePage
+
+#### Stack
+* React
+* Typescript
+* ChakraUI
+
 

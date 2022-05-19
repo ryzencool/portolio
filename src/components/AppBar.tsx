@@ -32,7 +32,7 @@ export default function AppBar() {
                     <NavLink to={`post`}><Text >Posts</Text></NavLink>
                     <Flex dir='row' alignItems={'center'}>
                         <BsGithub />
-                        <chakra.a href='https://github.com/ryzencool'>
+                        <chakra.a href='https://github.com/ryzencool/portolio'>
                             <Text marginLeft={'3px'}>
                                 Source
                             </Text>
