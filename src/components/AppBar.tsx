@@ -3,9 +3,16 @@ import React from 'react'
 import { Text } from '@chakra-ui/layout'
 import { Button } from '@chakra-ui/button'
 import { BsGithub } from 'react-icons/bs'
-import { SunIcon } from '@chakra-ui/icons'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { useColorMode, useColorModeValue } from '@chakra-ui/color-mode'
+import { chakra } from '@chakra-ui/system'
+import { NavigateFunction, useNavigate } from 'react-router'
 
 export default function AppBar() {
+    const { colorMode, toggleColorMode } = useColorMode()
+    const navigate: NavigateFunction = useNavigate();
+    const toggleColor = useColorModeValue('purple.500', 'orange.200')
+
     return (
         <Flex justifyContent={'center'}
             position={'fixed'}
@@ -15,19 +22,28 @@ export default function AppBar() {
             height={'56px'}>
             <Flex dir='row' width={'50%'} justifyContent={'space-between'}>
                 <Flex alignItems={'center'} >
-                    <Box>Marsh Chew</Box>
+                    <Box cursor={'pointer'} fontWeight={'bold'} onClick={() => navigate("/")}>
+                        Marsh Chew
+                    </Box>
                 </Flex>
                 <Flex flexDir={'row'} gap={4} alignItems={'center'} width={'50%'}>
-                    <Text>Works</Text>
-                    <Text>Posts</Text>
+                    <Text onClick={() => { navigate("/work") }}>Works</Text>
+                    <Text onClick={() => { navigate("/post") }}>Posts</Text>
                     <Flex dir='row' alignItems={'center'}>
                         <BsGithub />
-                        <Text marginLeft={'3px'}>Source</Text>
+                        <chakra.a href='https://github.com/ryzencool'>
+                            <Text marginLeft={'3px'}>
+                                Source
+                            </Text>
+                        </chakra.a>
                     </Flex>
                 </Flex>
                 <Flex alignItems={"center"}>
-                    <Button bgColor={'purple.500'}>
-                        <SunIcon />
+                    <Button bgColor={toggleColor} onClick={() => {
+                        toggleColorMode()
+                    }} >
+                        {colorMode === 'light' ?
+                            <MoonIcon /> : <SunIcon />}
                     </Button>
                 </Flex>
             </Flex>

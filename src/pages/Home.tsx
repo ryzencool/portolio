@@ -1,28 +1,13 @@
-import { Box, Flex, Text } from '@chakra-ui/layout'
+import { Box, Flex, Heading, Text } from '@chakra-ui/layout'
 import React from 'react'
-import { Avatar, Button, chakra, Image } from '@chakra-ui/react'
+import { Avatar, Button, chakra, Image, useColorModeValue } from '@chakra-ui/react'
 import { BsGithub, BsTwitter } from 'react-icons/bs'
+import {MainTitle, ContactButton} from '../components/Sections'
 
 
-const MainTitle = chakra(Text, {
-    baseStyle: {
-        borderBottom: '3px solid black',
-        paddingBottom: '3px',
-        fontWeight: 'bold',
-        fontSize: 'xl',
-    }
-})
-
-const HoverButton = chakra(Button, {
-    baseStyle: {
-        bgColor: 'rgb(240, 231, 219)',
-        _hover: { bgColor: 'green.50' },
-        borderRadius: '10',
-        color: 'green.500'
-    }
-})
 
 const Home: React.FC = () => {
+
     return (
         <Flex flexDirection='column' alignItems={'center'} >
             <Flex flexDir={'column'} alignItems={'center'} width={'30%'} marginTop={'76px'}>
@@ -43,13 +28,13 @@ const Home: React.FC = () => {
                         width={'100%'}
                         marginTop={'20px'}
                         textAlign='center' >
-                        <Text  >Hello, I'm an indie app developer based in China!</Text>
+                        <Text>Hello, I'm an indie app developer based in China!</Text>
                     </Flex>
 
                     <Flex flexDir={'row'} justifyContent={'space-between'} marginTop={'30px'} width={'100%'}>
                         <Box>
-                            <Text fontWeight={'bold'} fontSize={'30px'}>Marsh Chew</Text>
-                            <Text fontSize={'16px'}>Digital Craftsman(Artist/Developer/Designer)</Text>
+                            <Heading fontWeight={'bold'} fontSize={'3xl'}>Marsh Chew</Heading>
+                            <Text fontSize={'16px'}>Digital Craftsman(Ar/Developer/Designer)</Text>
                         </Box>
                         <Box>
                             <Avatar size='xl' name='Christian Nwamba' src='https://bit.ly/code-beast' />
@@ -104,14 +89,14 @@ const Home: React.FC = () => {
                         <MainTitle as={'span'}>On the web</MainTitle>
                         <chakra.ul marginTop={'10px'} listStyleType={'none'}>
                             <chakra.li>
-                                <HoverButton leftIcon={<BsGithub />} >
+                                <ContactButton  leftIcon={<BsGithub />} >
                                     <chakra.a href='https://github.com/ryzencool'>Github</chakra.a>
-                                </HoverButton>
+                                </ContactButton>
                             </chakra.li>
                             <chakra.li>
-                                <HoverButton leftIcon={<BsTwitter />}>
+                                <ContactButton  leftIcon={<BsTwitter />}>
                                     <chakra.a href='https://twitter.com/zmyjust'>Twitter</chakra.a >
-                                </HoverButton>
+                                </ContactButton>
                             </chakra.li>
                         </chakra.ul>
                     </Box>

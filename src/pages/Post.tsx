@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const Post: React.FC = () => {
-    return (<Box></Box>)
+    return (<Box>Posts</Box>)
 }
 
 export default Post;
