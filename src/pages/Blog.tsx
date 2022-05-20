@@ -3,7 +3,9 @@ import React from 'react'
 
 
 const Blog: React.FC = () => {
-    return (<Box>Posts</Box>)
+    return (<Box>
+
+    </Box>)
 }
 
 export default Blog;

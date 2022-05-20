@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/layout'
 import React from 'react'
-import { Avatar, Button, chakra, Image, useColorModeValue } from '@chakra-ui/react'
+import {Avatar, Button, Center, chakra, Image, useColorModeValue} from '@chakra-ui/react'
 import { BsGithub, BsTwitter } from 'react-icons/bs'
 import {MainTitle, ContactButton} from '../components/Sections'
 
@@ -17,26 +17,23 @@ const Home: React.FC = () => {
                     height={'300px'}
                 />
                 <Flex flexDirection={'column'} width={'100%'} alignItems='center'>
-                    <Flex flexDir={'column'}
-                        alignItems={'center'}
-                        justifyContent={'center'}
-                        bgColor={'hsla(0, 0%, 100%, .6)'}
+                    <Center
+                        bgColor={'hsla(0, 0%, 100%, .3)'}
                         backdropFilter={'blur(5px)'}
                         borderRadius={8}
                         height={'56px'}
                         width={'100%'}
-                        marginTop={'20px'}
-                        textAlign='center' >
+                        marginTop={'20px'}>
                         <Text>Hello, I'm an indie app developer based in China!</Text>
-                    </Flex>
+                    </Center>
 
                     <Flex flexDir={'row'} justifyContent={'space-between'} marginTop={'30px'} width={'100%'}>
                         <Box>
-                            <Heading fontWeight={'bold'} fontSize={'3xl'}>Marsh Chew</Heading>
-                            <Text fontSize={'16px'}>Digital Craftsman(Ar/Developer/Designer)</Text>
+                            <Heading fontWeight={'bold'} fontSize={'3xl'} >Marsh Chew</Heading>
+                            <Text fontSize={'16px'}>Digital Craftsman(Archer/Developer/Designer)</Text>
                         </Box>
                         <Box>
-                            <Avatar size='xl' name='Christian Nwamba' src='https://bit.ly/code-beast' />
+                            <Avatar size='xl' name='Marsh Chew' src='https://bit.ly/code-beast' />
                         </Box>
                     </Flex>
 
