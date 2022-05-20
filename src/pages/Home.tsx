@@ -9,8 +9,7 @@ import {MainTitle, ContactButton} from '../components/Sections'
 const Home: React.FC = () => {
 
     return (
-        <Flex flexDirection='column' alignItems={'center'} >
-            <Flex flexDir={'column'} alignItems={'center'} width={'30%'} marginTop={'76px'}>
+            <Flex flexDir={'column'} alignItems={'center'}  marginTop={'76px'}>
                 <Box bgImage={'https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'}
                     backgroundSize={'100% 100%'}
                     borderRadius={10}
@@ -102,7 +101,6 @@ const Home: React.FC = () => {
                     </Box>
                 </Flex>
             </Flex>
-        </Flex>
     )
 }
 

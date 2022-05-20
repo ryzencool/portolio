@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import {Box, Flex, Text} from '@chakra-ui/react';
 import React from 'react'
 
 
@@ -11,8 +11,8 @@ export interface WorkContentProps {
 const WorkContent: React.FC<WorkContentProps> = (props) => {
     return (
         <Box width={'45%'}>
-            <Box bgColor={'red.100'} height={'150px'} borderRadius={8}></Box>
-            <Flex flexDir={'column'} alignItems={'center'} marginTop={'10px'} >
+            <Box bgImage={props.image} backgroundSize={'100% 100%'} height={'150px'} borderRadius={8}></Box>
+            <Flex flexDir={'column'} alignItems={'center'} marginTop={'10px'}>
                 <Text fontWeight={'bold'}>
                     {props.appName}
                 </Text>

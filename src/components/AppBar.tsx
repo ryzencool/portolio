@@ -14,7 +14,7 @@ export default function AppBar() {
     const navigate: NavigateFunction = useNavigate();
     const location = useLocation();
 
-    const toggleColor = useColorModeValue('purple.500', 'orange.200')
+    const toggleColor = useColorModeValue('purple.200', 'orange.200')
     return (
         <Flex justifyContent={'center'}
             position={'fixed'}
@@ -37,10 +37,17 @@ export default function AppBar() {
                                     borderColor={'blue.300'}
                                     borderStyle={'solid'}
                                     padding={'5px'}
-                                    textDecoration={'underline'}
+                                    _hover={{
+                                        textDecoration: 'underline'
+                                    }}
+                                    borderRadius={5}
+                                    lineHeight={'1.5'}
                                     bgColor={'green.50'}
                                 >Work</Text>
                                 : <Text
+                                    _hover={{
+                                        textDecoration: 'underline'
+                                    }}
                                     padding={'5px'}
                                 >Work</Text>
                         }
